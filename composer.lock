@@ -4,8 +4,74 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3495d542dfefe8c2ecc8e84739675c0d",
+    "content-hash": "1ee8448144e4329f0266f785f95f7af8",
     "packages": [
+        {
+            "name": "alcaeus/mongo-php-adapter",
+            "version": "1.1.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alcaeus/mongo-php-adapter.git",
+                "reference": "43b6add94c8b4cb9890d662cba4c0defde733dcf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alcaeus/mongo-php-adapter/zipball/43b6add94c8b4cb9890d662cba4c0defde733dcf",
+                "reference": "43b6add94c8b4cb9890d662cba4c0defde733dcf",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-hash": "*",
+                "ext-mongodb": "^1.2.0",
+                "mongodb/mongodb": "^1.0.1",
+                "php": "^5.6 || ^7.0"
+            },
+            "provide": {
+                "ext-mongo": "1.6.14"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.0 || ^7.0",
+                "squizlabs/php_codesniffer": "^3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Mongo": "lib/Mongo"
+                },
+                "psr-4": {
+                    "Alcaeus\\MongoDbAdapter\\": "lib/Alcaeus/MongoDbAdapter"
+                },
+                "files": [
+                    "lib/Mongo/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "alcaeus",
+                    "email": "alcaeus@alcaeus.org"
+                },
+                {
+                    "name": "Olivier Lechevalier",
+                    "email": "olivier.lechevalier@gmail.com"
+                }
+            ],
+            "description": "Adapter to provide ext-mongo interface on top of mongo-php-libary",
+            "keywords": [
+                "database",
+                "mongodb"
+            ],
+            "time": "2019-11-11T20:47:32+00:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.8.0",
@@ -986,6 +1052,257 @@
             "time": "2019-12-04T06:09:14+00:00"
         },
         {
+            "name": "doctrine/mongodb",
+            "version": "1.6.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/mongodb.git",
+                "reference": "46b6316ae42df121df1b870b2cd4342ce7eeac80"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/mongodb/zipball/46b6316ae42df121df1b870b2cd4342ce7eeac80",
+                "reference": "46b6316ae42df121df1b870b2cd4342ce7eeac80",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "^2.2",
+                "ext-mongo": "^1.6.7",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "jmikola/geojson": "^1.0",
+                "phpunit/phpunit": "^5.7 || ^6.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "Allows usage of PHP 7",
+                "jmikola/geojson": "Support GeoJSON geometry objects in 2dsphere queries"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\MongoDB": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan H. Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                },
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com"
+                },
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com"
+                },
+                {
+                    "name": "Maciej Malarz",
+                    "email": "malarzm@gmail.com"
+                },
+                {
+                    "name": "Andreas Braun",
+                    "email": "alcaeus@alcaeus.org"
+                }
+            ],
+            "description": "Doctrine MongoDB Abstraction Layer",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "mongodb",
+                "persistence"
+            ],
+            "time": "2019-07-11T05:36:15+00:00"
+        },
+        {
+            "name": "doctrine/mongodb-odm",
+            "version": "1.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/mongodb-odm.git",
+                "reference": "d91c17bd2eeda0ca2a5576bea93e2468573e0d9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/d91c17bd2eeda0ca2a5576bea93e2468573e0d9f",
+                "reference": "d91c17bd2eeda0ca2a5576bea93e2468573e0d9f",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "~1.2",
+                "doctrine/cache": "~1.0",
+                "doctrine/collections": "~1.1",
+                "doctrine/common": "^2.5.0",
+                "doctrine/inflector": "~1.0",
+                "doctrine/instantiator": "^1.0.1",
+                "doctrine/mongodb": "^1.6.4",
+                "php": "^5.6 || ^7.0",
+                "symfony/console": "~2.3|~3.0|^4.0|^5.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^0.13.0",
+                "phpunit/phpunit": "^5.7.21|^7.5",
+                "symfony/yaml": "~2.3|~3.0|^4.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "Allows usage of PHP 7",
+                "symfony/yaml": "Enables the YAML metadata mapping driver"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\ODM\\MongoDB": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com"
+                },
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com"
+                },
+                {
+                    "name": "Jonathan H. Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                },
+                {
+                    "name": "Maciej Malarz",
+                    "email": "malarzm@gmail.com"
+                },
+                {
+                    "name": "Andreas Braun",
+                    "email": "alcaeus@alcaeus.org"
+                }
+            ],
+            "description": "Doctrine MongoDB Object Document Mapper",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "mongodb",
+                "odm",
+                "persistence"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fmongodb-odm",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-22T21:21:59+00:00"
+        },
+        {
+            "name": "doctrine/mongodb-odm-bundle",
+            "version": "3.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineMongoDBBundle.git",
+                "reference": "f095f575ba2fc5883161eb42707da5fff8dcb94a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineMongoDBBundle/zipball/f095f575ba2fc5883161eb42707da5fff8dcb94a",
+                "reference": "f095f575ba2fc5883161eb42707da5fff8dcb94a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "^1.2",
+                "doctrine/mongodb": "^1.4",
+                "doctrine/mongodb-odm": "^1.1",
+                "php": "^5.6 || ^7.0",
+                "psr/log": "^1.0",
+                "symfony/config": "^3.4 || ^4.0",
+                "symfony/console": "^3.4 || ^4.0",
+                "symfony/dependency-injection": "^3.4 || ^4.0",
+                "symfony/doctrine-bridge": "^3.4 || ^4.0",
+                "symfony/framework-bundle": "^3.4 || ^4.0",
+                "symfony/options-resolver": "^3.4 || ^4.0"
+            },
+            "require-dev": {
+                "doctrine/data-fixtures": "^1.2.2",
+                "phpunit/phpunit": "^5.7 || ^6.5",
+                "symfony/form": "^3.4 || ^4.0",
+                "symfony/phpunit-bridge": "^3.4 || ^4.0",
+                "symfony/yaml": "^3.4 || ^4.0"
+            },
+            "suggest": {
+                "doctrine/data-fixtures": "Load data fixtures"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Bundle\\MongoDBBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com"
+                },
+                {
+                    "name": "Kris Wallsmith",
+                    "email": "kris@symfony.com"
+                },
+                {
+                    "name": "Jonathan H. Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Symfony2 Doctrine MongoDB Bundle",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "mongodb",
+                "persistence",
+                "symfony"
+            ],
+            "time": "2020-02-27T22:13:42+00:00"
+        },
+        {
             "name": "doctrine/orm",
             "version": "v2.7.2",
             "source": {
@@ -1066,6 +1383,20 @@
             "keywords": [
                 "database",
                 "orm"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine/orm",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-03-19T06:41:02+00:00"
         },
@@ -1149,6 +1480,20 @@
                 "odm",
                 "orm",
                 "persistence"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fpersistence",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-03-21T15:13:52+00:00"
         },
@@ -1631,6 +1976,74 @@
                 "xml"
             ],
             "time": "2019-03-30T10:26:09+00:00"
+        },
+        {
+            "name": "mongodb/mongodb",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/mongo-php-library.git",
+                "reference": "dc43ba25fb593d6a2988e6a535b6f5386eda5b15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/dc43ba25fb593d6a2988e6a535b6f5386eda5b15",
+                "reference": "dc43ba25fb593d6a2988e6a535b6f5386eda5b15",
+                "shasum": ""
+            },
+            "require": {
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-mongodb": "^1.7",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.27 || ^6.4 || ^8.3",
+                "sebastian/comparator": "^1.0 || ^2.0 || ^3.0",
+                "squizlabs/php_codesniffer": "^3.4",
+                "symfony/phpunit-bridge": "^4.4@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MongoDB\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Braun",
+                    "email": "andreas.braun@mongodb.com"
+                },
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com"
+                },
+                {
+                    "name": "Katherine Walker",
+                    "email": "katherine.walker@mongodb.com"
+                }
+            ],
+            "description": "MongoDB driver library",
+            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
+            "keywords": [
+                "database",
+                "driver",
+                "mongodb",
+                "persistence"
+            ],
+            "time": "2020-02-04T18:16:35+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3506,6 +3919,20 @@
                 "scaffold",
                 "scaffolding"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-03-04T13:57:29+00:00"
         },
         {
@@ -3703,6 +4130,20 @@
                 "polyfill",
                 "portable",
                 "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-02-27T09:26:54+00:00"
         },
@@ -4415,28 +4856,28 @@
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v4.3.4",
+            "version": "v4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "d5b4e2d334c1d80e42876c7d489896cfd37562f2"
+                "reference": "f311af6e44fefedbd4f1e23e97607ef0f917bfcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/d5b4e2d334c1d80e42876c7d489896cfd37562f2",
-                "reference": "d5b4e2d334c1d80e42876c7d489896cfd37562f2",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/f311af6e44fefedbd4f1e23e97607ef0f917bfcc",
+                "reference": "f311af6e44fefedbd4f1e23e97607ef0f917bfcc",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3"
             },
             "require-dev": {
-                "symfony/var-dumper": "^4.1.1"
+                "symfony/var-dumper": "^4.4.9|^5.0.9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -4471,7 +4912,21 @@
                 "instantiate",
                 "serialize"
             ],
-            "time": "2019-08-22T07:33:08+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-01T01:10:09+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -4745,9 +5200,10 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.3",
+        "php": "^7.2",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
