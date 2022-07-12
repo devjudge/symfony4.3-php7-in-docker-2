@@ -32,9 +32,3 @@ services:
     App\Listener\ExceptionListener:
         tags:
             - { name: kernel.event_listener, event: kernel.exception }
-
-    doctrine_mongo_db_param_converter:
-        class: Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter
-        arguments: ["@doctrine_mongodb"]
-        tags:
-            - { name: "request.param_converter", converter: "doctrine.odm" }
