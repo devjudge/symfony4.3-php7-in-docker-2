@@ -5,6 +5,11 @@
         "php": "^7.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "composer/package-versions-deprecated": "1.11.99.5",
+        "doctrine/common": "^2",
+        "doctrine/doctrine-bundle": "^2",
+        "doctrine/doctrine-migrations-bundle": "^2",
+        "doctrine/orm": "^2",
         "friendsofsymfony/rest-bundle": "^2.7",
         "jms/serializer-bundle": "^2.4",
         "sensio/framework-extra-bundle": "^5.5",
@@ -14,20 +19,17 @@
         "symfony/form": "4.3.*",
         "symfony/framework-bundle": "4.3.*",
         "symfony/maker-bundle": "^1.14",
-        "symfony/orm-pack": "^1.0",
         "symfony/validator": "4.3.*",
-        "symfony/yaml": "4.3.*",
-        "alcaeus/mongo-php-adapter": "^1.1",
-        "doctrine/mongodb-odm-bundle": "^3.0",
-        "doctrine/mongodb-odm": "^1.2.0"
-    },
-    "require-dev": {
+        "symfony/yaml": "4.3.*"
     },
     "config": {
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true
+        }
     },
     "autoload": {
         "psr-4": {
