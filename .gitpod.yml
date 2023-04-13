@@ -3,7 +3,7 @@ tasks:
       sudo composer self-update --1 &&
       wget -qOdatabase-setup.sh https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/gitpod/backend/php/gitpod-setup.sh &&
       chmod 0755 database-setup.sh &&
-      bash database-setup.sh 7.1
+      bash database-setup.sh 7.2
     init: composer update && composer install
     command: php -S 127.0.0.1:8080 -t public
 ports:
